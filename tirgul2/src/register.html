@@ -6,20 +6,24 @@
     <title>Register</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="flex items-center justify-center h-screen m-0 bg-gray-100 text-gray-800 font-sans">
+<body class="flex items-center justify-center min-h-screen m-0 bg-gray-100 text-gray-800 font-sans">
     <div class="bg-white p-5 rounded-lg shadow-lg w-80">
         <h1 class="font-bold text-3xl mb-5 text-gray-800">Register</h1>
-        <form>
+        <form id="registerForm" action="/src/register.html" method="post">
             <label for="nameInput">Full Name</label>
             <input type="text" id="nameInput" required
                 class="w-full p-2.5 my-2.5 border border-gray-300 rounded box-border" />
 
-            <label for="emailInput">Email</label>
-            <input type="email" id="emailInput" required
+            <label for="mailInput">Email</label>
+            <input type="email" id="mailInput" required
                 class="w-full p-2.5 my-2.5 border border-gray-300 rounded box-border" />
 
             <label for="userInput">Username</label>
             <input type="text" id="userInput" required
+                class="w-full p-2.5 my-2.5 border border-gray-300 rounded box-border" />
+
+            <label for="dateInput">Date of Birth</label>
+            <input type="date" id="dateInput" required
                 class="w-full p-2.5 my-2.5 border border-gray-300 rounded box-border" />
 
             <label for="passInput">Password</label>
@@ -32,7 +36,9 @@
 
             <button type="submit" class="w-full p-3 mt-2 bg-blue-500 text-white rounded hover:bg-blue-600">Register</button>
         </form>
+        <div id="registerMessage" class="mt-2 text-red-500 text-center text-sm"></div>
         <a href="login.html" class="block text-center mt-4 text-blue-500 hover:underline">Already have an account? Login</a>
     </div>
+    <script src="register.js"></script>
 </body>
 </html>
